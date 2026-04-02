@@ -67,7 +67,7 @@ def train_models(df):
 # ✅ HOME ROUTE
 @app.route('/')
 def home():
-    return render_template('index1.html')
+    return send_from_directory(os.getcwd(),'index1.html')
 
 
 # ✅ PLAYERS LIST (FIXED)
