@@ -8,7 +8,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.preprocessing import LabelEncoder
 import os
-
+from flask import Flask, jsonify, render_template, send_from_directory
 app = Flask(__name__)
 CORS(app)
 
@@ -65,10 +65,12 @@ def train_models(df):
     return m1, m2, features
 
 
-@app.route('/')  
-def home():  
-    return render_template('index1.html') if os.path.exists('templates/index1.html') else send_from_directory(os.getcwd(), 'index1.html')
-
+@app.route('/')
+def home():
+    if os.path.exists('templates/index1.html'):
+        return render_template('index1.html')
+    else:
+        return send_from_directory(os.getcwd(), 'index1.html')
 
 # ✅ PLAYERS LIST (FIXED)
 @app.route('/players')
