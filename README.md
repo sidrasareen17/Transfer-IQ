@@ -44,19 +44,6 @@ TransferIQ/
 
 
 
-## ▶️ How to Run Locally
-
-1. Install dependencies:
-pip install -r requirements.txt
-
-2. Run project:
-python app.py
-
-3. Open browser:
-http://127.0.0.1:5000
-
----
-
 ## 🌍 Live Link 
 👉[(https://transfer-iq-2.onrender.com)] 
 
