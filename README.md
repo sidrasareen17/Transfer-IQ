@@ -35,13 +35,14 @@ TransferIQ/
 ├── requirements.txt               ✅ Dependencies
 ├── Procfile                       ✅ Render deploy
 ├── README.md                      ✅ Documentation
-├── lstm_model
+│
 ├── notebooks/
-│   └── data_exploration.ipynb 
+│   └── 01_data_exploration.ipynb  
 │
 └── templates/
     └── index.html                 ✅ Dashboard
----
+
+
 
 ## ▶️ How to Run Locally
 
@@ -56,7 +57,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🌍 Live Demo
+## 🌍 Live Link 
 👉[(https://transfer-iq-2.onrender.com)] 
 
 ---
