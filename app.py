@@ -64,10 +64,9 @@ def train_models(df):
     return m1, m2, features
 
 
-# ✅ HOME ROUTE
-@app.route('/')
-def home():
-    return send_from_directory(os.getcwd(),'index1.html')
+@app.route('/')  
+def home():  
+    return render_template('index1.html') if os.path.exists('templates/index1.html') else send_from_directory(os.getcwd(), 'index1.html')
 
 
 # ✅ PLAYERS LIST (FIXED)
@@ -115,6 +114,5 @@ def player(name):
     return jsonify(records)
 
 
-if __name__ == '__main__':
-    print("🚀 Running at http://127.0.0.1:5000")
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000, debug=True, use_reloader=False)
